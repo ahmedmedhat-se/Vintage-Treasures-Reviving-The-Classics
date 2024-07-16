@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Treasures: Revivng The Classics</title>
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Bundle -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Css Stylesheet link  -->
+    <link rel="stylesheet" href="VintageTreasuresLandingHomePage.css">
+
+    <!-- JavaScript Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JavaScript Code Part  -->
+    <script>
+        $(document).ready(function () {
+
+            $('#menu').click(function () {
+                $(this).toggleClass('fa-times');
+                $('.navbar').toggleClass('nav-toggle');
+            });
+
+            $(window).on('load scroll', function () {
+
+                $('#menu').removeClass('fa-times');
+                $('.navbar').removeClass('nav-toggle');
+
+                $('section').each(function () {
+
+                    let top = $(window).scrollTop();
+                    let height = $(this).height();
+                    let offset = $(this).offset().top - 200;
+                    let id = $(this).attr('id');
+
+                    if (top > offset && top < offset + height) {
+                        $('.navbar ul li a').removeClass('active');
+                        $('.navbar').find(`[href="#${id}"]`).addClass('active');
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+    <style>
+        :root {
+            --gradient: linear-gradient(90deg, #637CBB, #5269a3);
+        }
+
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        *::selection {
+            background: #fff;
+            color: #333;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: #333;
+        }
+
+        /* Styling the navbar section */
+        nav a span {
+            transition: all 2s ease;
+        }
+
+        nav a span:hover {
+            transform: rotate(360deg);
+        }
+
+        /* End of styling the navbar section */
+
+        /* Styling the section */
+
+        section {
+            padding: 0 7%;
+        }
+
+        .btn {
+            padding: .6rem 3rem;
+            font-size: 2rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border: none;
+            background: var(--gradient);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #333;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 3rem;
+            color: #fff;
+            padding: 1rem;
+            padding-top: 8.5rem;
+            width: 50rem;
+            margin: 0 auto;
+        }
+
+        i {
+            transition: all 2s ease;
+        }
+
+        i:hover {
+            transform: rotate(360deg);
+        }
+
+        .mainPage {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: url(https://wallpapercave.com/wp/wp8759041.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 9rem;
+        }
+
+        .mainPage .content {
+            padding: 1rem;
+            flex: 1 1 40rem;
+        }
+
+        .mainPage .content h1 {
+            font-size: 6rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .mainPage .content h4 {
+            font-size: 2rem;
+            font-weight: 560;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        /* End of styling the header section */
+
+        /* Styling another section part */
+        .sectionPart1 {
+            min-height: 100vh;
+            background-color: #444
+        }
+
+        .sectionPart1 .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .sectionPart1 .row .image {
+            text-align: center;
+            flex: 1 1 30rem;
+        }
+
+        .sectionPart1 .row .image img {
+            height: 65vh;
+            padding: 3rem 0;
+        }
+
+        .sectionPart1 .row .box-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex: 1 1 70rem;
+        }
+
+        .sectionPart1 .row .box-container .container {
+            margin: 2rem;
+            padding: 2rem;
+            width: 27rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+            background: #000;
+            border-radius: .5rem;
+        }
+
+        .sectionPart1 .row .box-container .container:hover {
+            background: rgba(1, 2, 50, 0.91);
+        }
+
+        .sectionPart1 .row .box-container .container:hover i {
+            color: #fff;
+        }
+
+        .sectionPart1 .row .box-container .container h3 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .sectionPart1 .row .box-container .container h3 i {
+            color: #637CBB;
+            padding-right: .7rem;
+        }
+
+        .sectionPart1 .row .box-container .container p {
+            font-size: 1.5rem;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        /* Section Part 1 Styling Ends */
+
+        /* Section Part 2 Starts */
+        .sectionPart2 {
+            background: #222;
+        }
+
+        .sectionPart2 .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 3rem;
+        }
+
+        .sectionPart2 .row .image {
+            flex: 1 1 45rem;
+            text-align: center;
+        }
+
+        .sectionPart2 .row .image img {
+            width: 100%;
+            margin-bottom: 25px;
+            border-radius: .5rem;
+        }
+
+        .sectionPart2 .row .content {
+            flex: 1 1 45rem;
+            padding: 2.5rem;
+        }
+
+        .sectionPart2 .row .content h3 {
+            font-size: 3.5rem;
+            color: #fff;
+        }
+
+        .sectionPart2 .row .content p {
+            font-size: 1.8rem;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        .sectionPart2 .row .content p i {
+            padding-right: .5rem;
+            color: #637CBB;
+        }
+
+        /* Section Part 2 Ends */
+
+        /* GameZone Styling Part Starts */
+        .GameZoneProducts {
+            min-height: 100vh;
+            background: #000;
+        }
+
+        .GameZoneProducts .box-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .GameZoneProducts .box-container .box {
+            margin: 1.5rem;
+            padding: 2rem;
+            width: 50rem;
+            background: #333;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .GameZoneProducts .box-container .box .image {
+            padding: 1rem;
+        }
+
+        .GameZoneProducts .box-container .box .image img {
+            padding: 0 1rem;
+            width: 30rem;
+            border-right: .1rem solid #ccc;
+        }
+
+        .GameZoneProducts .box-container .box .content {
+            padding: 1rem;
+        }
+
+        .GameZoneProducts .box-container .box .content h3 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .GameZoneProducts .box-container .box .content p {
+            font-size: 1.3rem;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        .GameZoneProducts .box-container .box .content .price {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        /* GameZone Styling Part Ends */
+
+        /* Styling the footer section */
+        footer {
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            height: auto;
+            padding: 50px 100px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(69, 3, 60, 0.8)), url(https://wallpaper.dog/large/10763864.jpg);
+        }
+
+        footer hr {
+            color: rgb(255, 0, 221);
+        }
+
+        /* End of styling the footer section */
+        /* media queries  */
+
+        @media (max-width:768px) {
+
+            html {
+                font-size: 55%;
+            }
+
+            header #menu {
+                display: block;
+            }
+
+            header .navbar {
+                position: fixed;
+                top: -120%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+            }
+
+            header .navbar ul {
+                flex-flow: column;
+                padding: 2rem;
+            }
+
+            header .navbar ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            header .navbar ul li a {
+                display: block;
+                background: var(--gradient);
+                margin: 1rem 0;
+                padding: 1rem;
+                font-size: 2.5rem;
+                z-index: 0;
+            }
+
+            header .navbar ul li a::before {
+                height: 100%;
+                bottom: 0;
+                z-index: -1;
+                background: #333;
+            }
+
+            .fa-times {
+                transform: rotate(180deg);
+            }
+
+            header .navbar.nav-toggle {
+                top: 7.4rem;
+            }
+
+            .home .content {
+                text-align: center;
+            }
+
+            .sectionPart1 .row .image {
+                display: none;
+            }
+
+            .contact .content {
+                padding: 3rem 0;
+            }
+
+            footer {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width:500px) {
+
+            html {
+                font-size: 50%;
+            }
+
+            .home .content h1 {
+                font-size: 4rem;
+            }
+
+            .home .image img {
+                height: auto;
+                width: 90%;
+            }
+
+            .heading {
+                width: auto;
+            }
+
+            .GameZoneProducts .box-container .box {
+                flex-flow: column;
+            }
+
+            .GameZoneProducts .box-container .box .image img {
+                width: 85%;
+                border: none;
+            }
+
+            footer {
+                padding: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-5">
+        <!-- The navbar barnd -->
+        <a href="#content" style="font-size: 25px;" class="navbar-brand"><span class="fas fa-dice-d6"></span> Vintage
+            Treasures</a>
+        <!-- The navbar toggler button -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+            <span class="navbar-toggler-icon" style="font-size: 22px;"></span>
+        </button>
+        <!-- The links section -->
+        <div class="collapse navbar-collapse justify-content-center" id="navContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#Home" class="nav-link" style="font-size: 20px;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Keys" class="nav-link" style="font-size: 20px;">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Product" class="nav-link" style="font-size: 20px;">Revivng The Classics</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#GameZone" class="nav-link" style="font-size: 20px;">GameZone</a>
+                </li>
+                <li class="nav-item">
+                    <a href="VintageAI.html" class="nav-link" style="font-size: 20px;">VintageAI</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ChaseGame.html" class="nav-link" style="font-size: 20px;">Fancy 2D Game</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#About" class="nav-link" style="font-size: 20px;">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://discord.com/"><i
+                            class="fab fa-discord"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://www.twitch.tv/"><i
+                            class="fab fa-twitch"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://www.xbox.com/"><i
+                            class="fab fa-xbox"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://www.playstation.com/en-us/"><i
+                            class="fab fa-playstation"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://store.steampowered.com/"><i
+                            class="fab fa-steam"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navbar section -->
+
+    <!-- Home section starts  -->
+    <section class="mainPage" id="Home">
+        <div class="content">
+            <h1>Vintage Treasures <br>Revivng The Classics!</h1>
+            <h4>Our website displays the most famous games <br>
+                on the market at their common prices <br>
+                and also explains the concept of game development, <br>
+                in addition to having a game developed by the team’s developers!</h4>
+            <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">Chase your “Game Development” dreams
+                    now!</button></a>
+        </div>
+    </section>
+    <!-- Header Section Ends -->
+
+    <!-- Section Part 1 Starts  -->
+    <section class="sectionPart1" id="Keys">
+        <h1 class="heading">Our Features</h1>
+        <div class="row">
+            <div class="image">
+                <img src="https://ae01.alicdn.com/kf/Hb10878cdc89d42ef9a19ea89f60fde88j.jpg_640x640Q90.jpg_.webp"
+                    alt="gamingimage">
+            </div>
+            <div class="box-container">
+                <div class="container">
+                    <h3> <i class="fas fa-project-diagram"></i> 2D Vs 3D </h3>
+                    <p>Check Our Vintage Treasures Webpage To Get More Information.</p>
+                    <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">2D VS 3D</button></a>
+                </div>
+                <div class="container">
+                    <h3> <i class="fas fa-terminal"></i> 2D Game </h3>
+                    <p>Our 2D Mini Game Is Available Now!</p>
+                    <a href="ChaseGame.html"><button class="btn">2D Mini Game</button></a>
+                </div>
+                <div class="container">
+                    <h3> <i class="fas fa-users-cog"></i> VintageAI </h3>
+                    <p>Check Our AI Chat Bot Program If You Need Help.</p>
+                    <a href="VintageAI.html"><button class="btn">VintageAI</button></a>
+                </div>
+                <div class="container">
+                    <h3> <i class="fas fa-chalkboard-teacher"></i> About Us </h3>
+                    <p>Check Our CodeCrafters Team To Get More Information.</p>
+                    <a href="#About"><button class="btn">CodeCrafters</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Part 1 Ends -->
+
+    <!-- Section Part 1.2 Starts  -->
+    <section class="sectionPart1" id="Keys" style="background-color: black;">
+        <h1 class="heading">Our Features</h1>
+        <div class="row">
+            <div class="box-container">
+                <div class="container" style="background-color: blue;">
+                    <h3> <i class="fas fa-chart-bar" style="color: black;"></i> Dimensions </h3>
+                    <p>Check Our Vintage Treasures Webpage To Get More Information.</p>
+                    <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">Dimensions</button></a>
+                </div>
+                <div class="container" style="background-color: blue;">
+                    <h3> <i class="fab fa-uncharted" style="color: black;"></i> Graphics </h3>
+                    <p>Check Our Vintage Treasures Webpage To Get More Information.</p>
+                    <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">Graphics</button></a>
+                </div>
+                <div class="container" style="background-color: blue;">
+                    <h3> <i class="fas fa-gamepad" style="color: black;"></i> Controls </h3>
+                    <p>Check Our Vintage Treasures Webpage To Get More Information.</p>
+                    <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">Controls</button></a>
+                </div>
+                <div class="container" style="background-color: blue;">
+                    <h3> <i class="fas fa-sitemap" style="color: black;"></i> Development </h3>
+                    <p>Check Our Vintage Treasures Webpage To Get More Information.</p>
+                    <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">Development</button></a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="https://c4.wallpaperflare.com/wallpaper/820/54/533/beeple-digital-art-3d-square-wallpaper-preview.jpg"
+                    alt="gamingimage">
+            </div>
+        </div>
+    </section>
+    <!-- Section Part 1.2 Ends -->
+
+    <!-- Section Part 2 Starts  -->
+    <section class="sectionPart2" id="Product">
+        <h1 class="heading">Revivng The Classics Website</h1>
+        <div class="row">
+            <div class="image">
+                <img src="https://img.freepik.com/free-vector/chatbot-artificial-intelligence-abstract-concept-illustration_335657-3723.jpg"
+                    alt="Screenshot">
+            </div>
+            <div class="content">
+                <h3>Vintage Treasures: Revivng The Classics.</h3>
+                <p>Here we are going to revive the classic video games,
+                    Helping game developers to know how to start,
+                    We reminisce about the past and learn how the two-dimensional worlds began,
+                    and the transitional phase to three-dimensionality!</p>
+                <p> <i class="fas fa-check-circle"></i> Explain the difference between 2D and 3D games </p>
+                <p> <i class="fas fa-check-circle"></i> There is an AI-powered chat program to help you </p>
+                <p> <i class="fas fa-check-circle"></i> There is a 2D game available now </p>
+                <a href="VintageTreasuresRevivngThrClassics.html"><button class="btn">Go check our Product!</button></a>
+            </div>
+        </div>
+        <div class="ratio ratio-21x9" style="display: flex;padding-bottom: 20px;justify-content: center;
+        align-items: center;">
+            <iframe class="embed-responsive-item" src="Vintage Treasure Video Test.mp4"></iframe>
+        </div>
+    </section>
+    <!-- Section Part 2 Ends -->
+
+    <!-- Game Store Section Starts  -->
+    <section class="GameZoneProducts" id="GameZone">
+        <h1 class="heading">GameZone</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202010/0221/vC7trMorHJgbImp8PCQvpI0p.png"
+                        alt="Horizon Zero Dawn">
+                </div>
+                <div class="content">
+                    <h3>Horizon Zero Dawn</h3>
+                    <div class="price">$29.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP9000-CUSA10237_00-HRZCE00000000000"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://4kwallpapers.com/images/wallpapers/horizon-forbidden-west-aloy-playstation-5-2020-games-2560x2560-1465.jpg"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h3>Horizon Forbidden West</h3>
+                    <div class="price">$49.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP9000-PPSA04072_00-FORBIDDENWESTPS5"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0204/uDFoGvnMTTCLVmTwjj0njGWC.png"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h3>Resident Evil 2 Remake</h3>
+                    <div class="price">$339.99</div>
+                    <a href="https://store.playstation.com/en-br/product/UP0102-PPSA03952_00-BH3ROFF000000001"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0206/WmriZBRlSeXWEEDLJOWW7MdW.png"
+                        alt="Resident Evil 3 Reamke">
+                </div>
+                <div class="content">
+                    <h3>Resident Evil 3 Remake</h3>
+                    <div class="price">$59.99</div>
+                    <a href="https://store.playstation.com/en-br/product/UP0102-PPSA03952_00-BH3ROFF000000001"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202210/0706/EVWyZD63pahuh95eKloFaJuC.png"
+                        alt="Resident Evil 4 Reamke">
+                </div>
+                <div class="content">
+                    <h3>Resident Evil 4 Remake</h3>
+                    <div class="price">$59.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP0102-CUSA03962_00-BH70000000000001"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202101/0812/FkzwjnJknkrFlozkTdeQBMub.png"
+                        alt="Resident Evil 8">
+                </div>
+                <div class="content">
+                    <h3>Resident Evil: The Village</h3>
+                    <div class="price">$34.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP0102-PPSA01556_00-VILLAGEFULLGAMEX"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://cdn.salla.sa/mpbny/30hmkdFIo5NKDw9QY3ezrRpHx0nzAMiT9LNhQtVW.png"
+                        alt="Resident Evil 8 Gold Edition">
+                </div>
+                <div class="content">
+                    <h3>Resident Evil: Village Gold</h3>
+                    <div class="price">$39.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP0102-PPSA01556_00-VILLAGEFULLGAMEX"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/cdn/UP0102/CUSA04772_00/cxd9vkFOAHVwwYG7lQKENGkrfyoAChNh.png"
+                        alt="Resident Evil 7">
+                </div>
+                <div class="content">
+                    <h3>Resident Evil 7 The Biohazard</h3>
+                    <div class="price">$9.98</div>
+                    <a href="https://store.playstation.com/en-us/product/UP0102-CUSA03962_00-BH70000000000001"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://assetsio.reedpopcdn.com/modern-warfare-2-visual-3.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
+                        alt="COD Modern Warfare 2">
+                </div>
+                <div class="content">
+                    <h3>Call Of Duty Modern Warfare Remake</h3>
+                    <div class="price">$69.99-</div>
+                    <a href="https://www.playstation.com/en-us/games/call-of-duty-modern-warfare-ii/"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202308/1722/15f4ab1e0fe6a37609b164362a653c0e5bcee98a861d0f10.png"
+                        alt="COD Modern Warfare 3">
+                </div>
+                <div class="content">
+                    <h3>Call Of Duty Modern Warfare Remake</h3>
+                    <div class="price">$69.99</div>
+                    <a href="https://www.playstation.com/en-us/games/call-of-duty-modern-warfare-iii/"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://blog.fr.playstation.com/uploads/sites/10/2022/06/66426fd0bac7cda4c36d7512df18b3f1c7de3338.jpg"
+                        alt="Last of us 1">
+                </div>
+                <div class="content">
+                    <h3>The Last Of Us: Past 1</h3>
+                    <div class="price">$19.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP9000-CUSA00552_00-THELASTOFUS00000"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/0117/315718bce7eed62e3cf3fb02d61b81ff1782d6b6cf850fa4.png"
+                        alt="Last of us 2">
+                </div>
+                <div class="content">
+                    <h3>The Last Of Us: Past 2</h3>
+                    <div class="price">$49.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP9000-CUSA07820_00-THELASTOFUSPART2"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img
+                        src="https://image.api.playstation.com/cdn/EP4040/CUSA01761_00/fxnwk1wJSrckorJgDkste14EkArBS7SH.png"
+                        alt="Pay Day">
+                </div>
+                <div class="content">
+                    <h3>Pay Day</h3>
+                    <div class="price">$19.99</div>
+                    <a href="https://store.playstation.com/en-us/product/UP4040-CUSA01770_00-PAYDAY2CRIMEWAVE/"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img
+                        src="https://image.api.playstation.com/cdn/UP1003/CUSA02557_00/dXO0EepV1qyqaRkIBYcpCX5Q4oUSNQza.png"
+                        alt="Fallout 4">
+                </div>
+                <div class="content">
+                    <h3>Fallout 4</h3>
+                    <div class="price">$6.59</div>
+                    <a href="https://store.playstation.com/en-us/product/UP1003-CUSA02557_00-FALLOUT4FULLGAME"><button
+                            class="btn">Add To Cart</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Game Store Section Ends -->
+
+    <!-- Footer section starts  -->
+    <footer class="text-light pb-4 pt-5" style="width: 100%;" id="About">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                    <h2 class="text-uppercase mb-4 text-info font-weight-bold" style="font-size: 3rem;">CodeCrafters
+                    </h2>
+                    <hr class="mb-4">
+                    <h5 class="text-light font-weight-bold" style="font-size: 2rem;">We are a team of networking,
+                        cybersecurity, programming and
+                        web development
+                        students.</h5>
+                </div>
+            </div>
+            <div class="row text-center text-md-left">
+                <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                    <h2 class="text-uppercase mb-4 text-info font-weight-bold" style="font-size: 3rem;">About Us</h2>
+                    <hr class="mb-4">
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">Sololearn</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">GitHub</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">BeHance</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">CodeForces</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="row text-center text-md-left">
+                <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                    <h2 class="text-uppercase mb-4 text-info font-weight-bold" style="font-size: 3rem;">Our Products
+                    </h2>
+                    <hr class="mb-4">
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">The Walking Dead
+                            Seried Brief</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">IntoMyMind
+                            Unofficial Website</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;font-size: 2rem;">WattWizards</a>
+                    </h5>
+                    <h5>
+                        <a href="https://drive.google.com/drive/folders/12yGw5R5VF0wZ8N00g-MFeRqoyo2l3PDI" class="text-light" style="text-decoration: none;font-size: 2rem;">Vintage Treasures:
+                            Revivng The
+                            Classics</a>
+                        <a href="https://drive.google.com/drive/folders/12yGw5R5VF0wZ8N00g-MFeRqoyo2l3PDI" class="text-light" style="text-decoration: none;font-size: 2rem;">PDF - Word Documents</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center text-md-left">
+            <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                <h2 class="text-uppercase mb-4 text-info font-weight-bold" style="font-size: 3rem;">Copyrights @
+                    CodeCrafters 2024.</h2>
+                <hr class="mb-4">
+                <h5>
+                    <a href="#" class="text-light" style="margin-right: 12px;font-size: 2rem;"><i
+                            class="fab fa-discord"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;font-size: 2rem;"><i
+                            class="fab fa-twitch"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;font-size: 2rem;"><i
+                            class="fab fa-xbox"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;font-size: 2rem;"><i
+                            class="fab fa-playstation"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;font-size: 2rem;"><i
+                            class="fab fa-steam"></i></a>
+                </h5>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer section ends -->
+</body>
+
+</html>

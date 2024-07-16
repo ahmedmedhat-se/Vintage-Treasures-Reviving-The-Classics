@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Treasures: Revivng The Classics</title>
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Bundle -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JavaScript Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        /* Styling the body */
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        /* Styling the navbar section */
+        nav a span {
+            transition: all 2s ease;
+        }
+
+        nav a span:hover {
+            transform: rotate(360deg);
+        }
+
+        /* End of styling the navbar section */
+        /* Styling the header section */
+        header {
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            height: auto;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(49, 3, 43, 0.499)), url(https://tornightfire.com/wp-content/uploads/2021/10/Incantamentum-hero.jpg);
+        }
+
+        /* End of styling the header section */
+        /* Styling the section */
+        i {
+            transition: all 2s ease;
+        }
+
+        i:hover {
+            transform: rotate(360deg);
+        }
+
+        /* End of styling the section */
+        /* Styling the footer section */
+        footer {
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            height: auto;
+            padding: 50px 100px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(69, 3, 60, 0.8)), url(https://wallpaper.dog/large/10763864.jpg);
+        }
+
+        footer hr {
+            color: rgb(255, 0, 221);
+        }
+
+        /* End of styling the footer section */
+        /* making the website responsive */
+        @media (max-width:1023px) {
+            header {
+                padding: 15px 30px;
+            }
+
+            .logo {
+                text-decoration: none;
+                color: #000000;
+                font-weight: 700;
+                font-size: 1.8em;
+                padding-right: 10px;
+            }
+
+            .navigation a {
+                padding-left: 20px;
+            }
+
+            .title {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 80px 20px;
+            }
+
+            .main-content h2 {
+                font-size: 1em;
+            }
+
+            .main-content h3 {
+                font-size: 1.6em;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width:568px) {
+            body {
+                font-size: 12px;
+            }
+
+            .main-content h2 {
+                font-size: 0.8em;
+            }
+
+            .main-content h3 {
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width:300px) {
+            body {
+                font-size: 700px;
+            }
+        }
+
+        /* Making it responsive is done */
+        /* End of styling the whole document */
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+        <!-- The navbar barnd -->
+        <a href="#content" class="navbar-brand"><span class="fas fa-dice-d6"></span> Vintage Treasures</a>
+        <!-- The navbar toggler button -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- The links section -->
+        <div class="collapse navbar-collapse justify-content-center" id="navContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#2D" class="nav-link" style="font-size: 18px;">2D</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#ATaleOf2D" class="nav-link" style="font-size: 18px;">A Tale of 2 Dimensions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Dimensions" class="nav-link" style="font-size: 18px;">Dimensions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Graphics" class="nav-link" style="font-size: 18px;">Graphics</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Controls" class="nav-link" style="font-size: 18px;">Controls</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#3D" class="nav-link" style="font-size: 18px;">3D</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#About" class="nav-link" style="font-size: 18px;">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://discord.com/"><i
+                            class="fab fa-discord"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://www.twitch.tv/"><i
+                            class="fab fa-twitch"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://www.xbox.com/"><i
+                            class="fab fa-xbox"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://www.playstation.com/en-us/"><i
+                            class="fab fa-playstation"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 18px;" href="https://store.steampowered.com/"><i
+                            class="fab fa-steam"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navbar section -->
+    <!-- The header section -->
+    <header>
+        <div class="container-fluid p-4" id="interface">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-light text-center mb-3">
+                        Welcome 2 Vintage Treasures: Revivng The Classics!
+                    </h3>
+                    <h6 class="text-light" style="font-size: 18px;letter-spacing: 2px;text-align: center;">
+                        Here we are going to revive the classic video games,
+                        Helping game developers to know how to start,
+                        We reminisce about the past and learn how the two-dimensional worlds began,
+                        and the transitional phase to three-dimensionality!
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of the header section -->
+    <!-- The section part -->
+    <section id="content" style="padding: 16px;">
+        <div class="container-fluid" id="2D">
+            <!-- The 2D interface -->
+            <div class="row">
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;">
+                    <i class="fas fa-gamepad" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>2D</h2>
+                    <h5>Games that use parallel projection typically use 2D raster graphics, <br>
+                        allowing developers to create large, complex game worlds efficiently <br>
+                        and with relatively little art by dividing the art into sprites <br>
+                        or tiles and reusing them repeatedly. For the current generation, <br>
+                        2D worlds are also boring.</h5>
+                    <a href="https://www.giantbomb.com/2d/3015-1427/" class="btn text-light"
+                        style="background-color: #25025d;">2D Wikipedia</a>
+                </div>
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;" id="ATaleOf2D">
+                    <i class="fas fa-chess-board" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>How it all started</h2>
+                    <h5>A variety of computer graphics techniques have been used <br>
+                        to display video game content throughout the history of video games. <br>
+                        The dominance of individual technologies has evolved over time, <br>
+                        due to advances in hardware and limitations such as the <br>
+                        processing power of CPUs, GPUs, game engines, and graphics <br>
+                        that have evolved over time.</h5><br>
+                    <a href="https://en.wikipedia.org/wiki/OXO_(video_game)" class="btn text-light"
+                        style="background-color: #25025d;">OXO</a>
+                </div>
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;">
+                    <i class="fas fa-trophy" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>End Of The ERA</h2>
+                    <h5>2.5D ("two and a half dimensions"), 3/4 perspective and pseudo <br>
+                        3D are informal terms used to describe projections and graphic <br>
+                        techniques that attempt to "fake" 3D, usually using some form <br>
+                        of parallel projection, where the viewpoint is from a fixed perspective, <br>
+                        but also reveals About multiple aspects of an object. <br>
+                        Over time, with the emergence of devices, engines, computer and <br>
+                        graphic processors, and new ideas, we can say that the two-dimensional era <br>
+                        has ended and a new three-dimensional world has emerged!. <br>
+                    </h5>
+                    <a href="https://en.wikipedia.org/wiki/2.5D" class="btn text-light"
+                        style="background-color: #25025d;">"Fake" Dimensions</a>
+                </div>
+            </div>
+        </div><br>
+        <div class="container-fluid p-4 bg-dark" id="ATaleOf2D">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-light text-center mb-3">
+                        End of the 2d Era
+                    </h2>
+                    <h5 class="text-light" style="font-size: 18px;letter-spacing: 2px;text-align: center;">
+                        Hence, we can say that a great era of diverse,
+                        great and influential games has ended,
+                        which had great stories and was based on few capabilities,
+                        but gave birth to a generation of valuable games.
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <!-- The end of the 2D interfaces -->
+        <!-- The transition interfaces -->
+        <div class="container-fluid" id="3D">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 part h-100" style="padding: 16px;text-align: center;">
+                    <i class="fas fa-user-cog" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>The First Step</h2>
+                    <h5>In addition, 3D graphical techniques such as landmark mapping <br>
+                        and parallax mapping are often used to extend the illusion of <br>
+                        3D without significantly increasing the computational <br>
+                        load resulting from larger numbers of polygons.</h5>
+                    <a href="https://sketchfab.com/v7x/collections/3d-game-world-maps-4ada5175dcaf43a687ede10b42eb5509"
+                        class="btn text-light" style="background-color: #25025d;">3D Maps</a>
+                </div>
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;">
+                    <i class="fas fa-ad" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>Advertisment</h2>
+                    <h5>Advertising in video games is the integration of advertising <br>
+                        into video games to promote products or organizations or <br>
+                        even promote other games from the same company. <br>
+                        Other methods of advertising in video games include <br>
+                        placing products within the game and sponsoring <br>
+                        commercial games or other game-related content while identifying <br>
+                        the target audience of fans of those games.</h5>
+                    <a class="btn text-light" href="https://www.eskimi.com/blog/advertising-in-games"
+                        style="background-color: #25025d;">Ads</a>
+                </div>
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;">
+                    <i class="fas fa-chart-line" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>Who's popular?</h2>
+                    <h5>D games, also known as three-dimensional games, <br>
+                        represent a significant leap in video game technology <br>
+                        compared to their 2D counterparts. <br>
+                        These games create immersive environments and characters <br>
+                        that appear to exist in a three-dimensional space, <br>
+                        providing players with a sense of depth and realism</h5>
+                    <a href="https://300mind.studio/blog/2d-vs-3d-games-development/" class="btn text-light"
+                        style="background-color: #25025d;">Who's popular?</a>
+                </div>
+            </div>
+        </div><br>
+        <div class="container-fluid p-4 bg-dark" id="interface">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-light text-center mb-3">
+                        The transition form 2D : 3D
+                    </h3>
+                    <h6 class="text-light" style="font-size: 18px;letter-spacing: 2px;text-align: center;">
+                        Here we are going to revive the classic video games,
+                        Helping game developers to know how to start,
+                        We reminisce about the past and learn how the two-dimensional worlds began,
+                        and the transitional phase to three-dimensionality!
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <!-- The Dimensions/Graphics/Controls interface -->
+        <div class="container-fluid" id="2D">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;" id="Dimensions">
+                    <i class="fas fa-map" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>Dimensions</h2>
+                    <h5>Dimensions refer to the physical aspects of the game, such as terrain, <br>
+                        objects, and characters. Video game dimensions are important in <br>
+                        creating attractive video games that captivate players with immersive <br>
+                        experiences. Dimensions, in general, are geometric lines and dimensions <br>
+                        that game designers use to define the features of that game.</h5>
+                    <a href="https://www.juegostudio.com/blog/video-game-world" class="btn text-light"
+                        style="background-color: #25025d;">Dimensions</a>
+                </div>
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;" id="Graphics">
+                    <i class="fas fa-palette" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>Graphics</h2>
+                    <h5>2D and 3D graphics are completely different from each other, <br>
+                        both in their creation and in their final result. <br>
+                        At a basic level, 2D graphics have height and width, <br>
+                        and 3D graphics add a layer of depth that provides an element of realism. <br>
+                        People are more familiar with 2D graphics in traditional animation</h5><br>
+                    <a href="https://www.nextthought.com/blog/2d-graphics-vs-3d-graphics-which-is-more-effective"
+                        class="btn text-light" style="background-color: #25025d;">Graphics</a>
+                </div>
+                <div class="col-lg-4 col-md-4 part" style="padding: 16px;text-align: center;" id="Controls">
+                    <i class="fas fa-terminal" style="font-size: 33px;color: #25025d;"></i>
+                    <h2>Controls</h2>
+                    <h5>2D games often have simpler controls, with players only needing to <br>
+                        move left and right, jump and attack. On the other hand, <br>
+                        3D games require more complex controls to move the character <br>
+                        in three dimensions, which may take some getting used to for new players.
+                    </h5><br>
+                    <a href="https://www.pinterest.com/pin/creators-guide-to-2d-and-3d-games--320037117278799432/"
+                        class="btn text-light" style="background-color: #25025d;">Creator's Guide</a>
+                </div>
+            </div>
+        </div><br>
+        <div class="container-fluid p-4 bg-dark" id="interface">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-light text-center mb-3">
+                        Game Development
+                    </h3>
+                    <h6 class="text-light" style="font-size: 18px;letter-spacing: 2px;text-align: center;">
+                        Here we are going to revive the classic video games,
+                        Helping game developers to know how to start,
+                        We reminisce about the past and learn how the two-dimensional worlds began,
+                        and the transitional phase to three-dimensionality!
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <!-- The end of the Dimensions/Graphics/Controls interfaces -->
+    </section>
+    <!-- End of the main section interfaces -->
+    <!-- Footer section -->
+    <footer class="text-light pb-4 pt-5" style="width: 100%;" id="About">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                    <h2 class="text-uppercase mb-4 text-info font-weight-bold">CodeCrafters</h2>
+                    <hr class="mb-4">
+                    <h5 class="text-light font-weight-bold">We are a team of networking, cybersecurity, programming and
+                        web development
+                        students.</h5>
+                </div>
+            </div>
+            <div class="row text-center text-md-left">
+                <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                    <h2 class="text-uppercase mb-4 text-info font-weight-bold">About Us</h2>
+                    <hr class="mb-4">
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">Sololearn</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">GitHub</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">BeHance</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">CodeForces</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="row text-center text-md-left">
+                <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                    <h2 class="text-uppercase mb-4 text-info font-weight-bold">Our Products</h2>
+                    <hr class="mb-4">
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">The Walking Dead Seried Brief</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">IntoMyMind Unofficial Website</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">WattWizards</a>
+                    </h5>
+                    <h5>
+                        <a href="#" class="text-light" style="text-decoration: none;">Vintage Treasures: Revivng The
+                            Classics</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center text-md-left">
+            <div class="col-md-8 col-lg-8 col-xl-8 mx-auto mt-3">
+                <h2 class="text-uppercase mb-4 text-info font-weight-bold">Copyrights @ CodeCrafters 2024.</h2>
+                <hr class="mb-4">
+                <h5>
+                    <a href="#" class="text-light" style="margin-right: 12px;"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;"><i class="fab fa-twitch"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;"><i class="fab fa-xbox"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;"><i class="fab fa-playstation"></i></a>
+                    <a href="#" class="text-light" style="margin-right: 12px;"><i class="fab fa-steam"></i></a>
+                </h5>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>
